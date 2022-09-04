@@ -1,0 +1,37 @@
+{
+    "plugins": [
+      "-lunr", 
+      "-search", 
+      "search-plus",
+      "github",
+      "tbfed-pagefooter",
+      "edit-link",
+      "code",
+      "back-to-top-button",
+      "pageview-count",
+      "popup",
+      "hide-element",
+      "splitter",
+      "advanced-emoji",
+      "expandable-chapters-small",
+      "page-toc-button",
+      "flexible-alerts"
+    ],
+    "pluginsConfig": {
+        "github": {
+          "url": "https://github.com/JiranHub/learning"
+        },
+        "tbfed-pagefooter": {
+            "copyright":"&copy Guangliang",
+            "modify_label": "UpdateTime:",
+            "modify_format": "YYYY/MM/DD HH:mm:ss"
+        },
+        "edit-link": {
+            "base": "https://github.com/JiranHub/learning/blob/master",
+            "label": ""
+        },
+        "hide-element": {
+            "elements": [".gitbook-link"]
+        }
+    }
+}

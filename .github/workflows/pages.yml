@@ -1,0 +1,36 @@
+# Sample workflow for building and deploying a gitbook site to GitHub Pages
+name: 'Gitbook Action Build'
+
+on:
+  push:
+    branches:
+      - master  # trigger branch
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout action
+        uses: actions/checkout@v2
+      - name: Gitbook Action
+        uses: zanderzhao/gitbook-action@v1.2.4
+        with:
+          token: ${{ secrets.WORKFLOW_PERSONAL_TOKEN }}
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
