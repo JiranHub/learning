@@ -31,6 +31,3 @@ jobs:
         uses: zanderzhao/gitbook-action@v1.2.4
         with:
           token: ${{ secrets.WORKFLOW_PERSONAL_TOKEN }}
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
