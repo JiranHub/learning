@@ -9,10 +9,18 @@
 
 * [Flutter](/doc/flutter/README.md)
 
-* [Android](/doc/android/jetpack.md)
+* [Android](/doc/android/Jetpack.md)
 	  
-  * [Gitbook](/doc/android/jetpack.md)
-  * [Github](/doc/git/ui_qusition.md)
+  * [Jetpack](/doc/android/Jetpack.md)
+  * [常见UI问题](/doc/android/ui_qusition.md)
+
+  * [包体积优化](/doc/android/包体积优化.md)
+
+  * [冷启动优化](/doc/android/冷启动优化.md)
+
+  * [内存优化](/doc/android/内存优化.md)
+
+  * [wms](/doc/android/wms.md)
 
 * [Figma](/doc/figma/README.md)
 
