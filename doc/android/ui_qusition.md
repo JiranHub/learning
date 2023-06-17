@@ -204,10 +204,6 @@
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 ```
 
-
-
-
-
 扩大点击区域
 
 ```kotlin
@@ -223,4 +219,35 @@ fun View.expendTouchArea(expendSize: Int) {
         parentView.touchDelegate = TouchDelegate(rect, this)
     }
 }
+```
+
+dp处理
+
+```kotlin
+/**
+ * 系统 dp 转换，面板端不可使用，APP 端才可用
+ */
+val Number.dp
+    get() = TypedValue.applyDimension(
+        TypedValue.COMPLEX_UNIT_DIP,
+        toFloat(),
+        Resources.getSystem().displayMetrics
+    ).toInt()
+```
+
+flags
+
+```kotlin
+const val DETAIL_CONTENT_FLAG_NORMAL = 0
+const val DETAIL_CONTENT_FLAG_CAN_DRAG_DEL = 0x000001
+const val DETAIL_CONTENT_FLAG_CAN_MULTI_DEL = 0x000010
+const val DETAIL_CONTENT_FLAG_CAN_DRAG_SORT = 0x000100
+
+
+// 判断包含
+flags.and(DETAIL_CONTENT_FLAG_CAN_DRAG_DEL) == DETAIL_CONTENT_FLAG_CAN_DRAG_DEL
+
+
+// 清除标记
+flags = supportFlagsTemp and DETAIL_CONTENT_FLAG_CAN_DRAG_DEL.inv()
 ```
